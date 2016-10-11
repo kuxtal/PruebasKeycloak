@@ -1,7 +1,10 @@
 package mx.japs.pruebas.keycloakback.controller;
 
+import java.util.HashMap;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,32 +17,42 @@ public class IndexController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	@ResponseBody
-	//@PreAuthorize("hasRole('ROLE_ANONYMOUS')")
-	public String index() {
+	@PreAuthorize("hasRole('ROLE_USER')")
+	public HashMap index() {
 		logger.debug("index()");
 		//logger.debug("Usuario: {} - {}", userDetails.getId(), userDetails.getFullName());
 		
 		//return "Usuario ingresado: " + userDetails.getId() + " - " +  userDetails.getFullName() + ": Roles " + userDetails.getRoles();
-		return "Hola Mundo!!!";
+		
+		HashMap respuesta = new HashMap();
+		respuesta.put("content", "Hola Mundo!!! Index");
+
+		return respuesta;
 	}
 	
 	@RequestMapping(value = "/consulta", method = RequestMethod.GET)
 	@ResponseBody
-	//@PreAuthorize("hasRole('ROL_ADMIN')")
-	public String consulta() {
+	@PreAuthorize("hasRole('ROL_ADMIN')")
+	public HashMap consulta() {
 		logger.debug("consulta()");
 		//logger.debug("Usuario: {} - {}", userDetails.getId(), userDetails.getFullName());
 		
-		return "Pagina de Consulta";
+		HashMap respuesta = new HashMap();
+		respuesta.put("content", "Hola Mundo!!! Consulta");
+		
+		return respuesta;
 	}
 	
 	@RequestMapping(value = "/modificacion", method = RequestMethod.GET)
 	@ResponseBody
-	//@PreAuthorize("hasRole('ROL_ADMIN')")
-	public String modificacion() {
+	@PreAuthorize("hasRole('ROL_ADMIN')")
+	public HashMap modificacion() {
 		logger.debug("modificacion()");
 		//logger.debug("Usuario: {} - {}", userDetails.getId(), userDetails.getFullName());
 		
-		return "Pagina de Modificacion";
+		HashMap respuesta = new HashMap();
+		respuesta.put("content", "Hola Mundo!!! Modificacion");
+		
+		return respuesta;
 	}
 }

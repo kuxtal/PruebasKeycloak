@@ -1,0 +1,8 @@
+{
+	"realm": "Demo-realm",
+	"auth-server-url": "http://japerezlocal:8080/auth",
+	"resource": "PruebasKeycloak_back",
+	"credentials" : {
+		"secret" : "89e4656d-5517-46ad-8d2b-77e025d60248"	
+	}
+}

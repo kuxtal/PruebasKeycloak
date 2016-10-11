@@ -1,9 +1,9 @@
 {
   "realm": "realm-prueba",
   "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlxuKws++ADdvmlk8vqsyKy4012X11Qbilx1XfCFvxg4LSXFKOChqwGnM3T/2XB0Wam3XYAXeMhOD87yMzQI2y83IuOJUvEJk12kk1txa7vWGdrZ9aDYNfp+OTllugH2x1ch0NBoU8s7XDuPrnBs0zB7S0jlKKrFdBTXo2SnmlAs0cBepp0z8tGZEQb47DBrvMAO7po7IlOJ3GnmScxhHN8VU4uoxAXCjHYeHbR4HgMRuLd0DxNUfc1oMHfTWRUvez7zgEfoJsRC1v7MvBAGIwi0yq+BsVBzAGvVUJxP1G/pRG0iNRaXPpIllvACQXUal++eWpEtZvJqOVrEUxyzJlwIDAQAB",
+  "bearer-only": true,
   "auth-server-url": "http://japerezlocal:8080/auth",
   "ssl-required": "external",
-  "resource": "PruebasKeycloak_front",
-  "public-client": true,
+  "resource": "PruebasKeycloak_back",
   "enable-cors" : true
 }
