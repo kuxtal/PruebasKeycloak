@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.json.JSONObject;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,7 +16,7 @@ public class IndexController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	@ResponseBody
-	@PreAuthorize("hasRole('ROLE_USER')")
+	@PreAuthorize("hasAuthority('INDEX_PUBLICO')")
 	public HashMap index() {
 		logger.debug("index()");
 		//logger.debug("Usuario: {} - {}", userDetails.getId(), userDetails.getFullName());
@@ -32,7 +31,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/consulta", method = RequestMethod.GET)
 	@ResponseBody
-	@PreAuthorize("hasRole('ROL_ADMIN')")
+	@PreAuthorize("hasAuthority('INDEX_CONSULTA')")
 	public HashMap consulta() {
 		logger.debug("consulta()");
 		//logger.debug("Usuario: {} - {}", userDetails.getId(), userDetails.getFullName());
@@ -45,7 +44,7 @@ public class IndexController {
 	
 	@RequestMapping(value = "/modificacion", method = RequestMethod.GET)
 	@ResponseBody
-	@PreAuthorize("hasRole('ROL_ADMIN')")
+	@PreAuthorize("hasAuthority('INDEX_MODIFICACION')")
 	public HashMap modificacion() {
 		logger.debug("modificacion()");
 		//logger.debug("Usuario: {} - {}", userDetails.getId(), userDetails.getFullName());

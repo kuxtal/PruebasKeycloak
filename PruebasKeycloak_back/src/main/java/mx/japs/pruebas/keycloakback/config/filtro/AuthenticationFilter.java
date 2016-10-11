@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 
 import mx.japs.pruebas.keycloakback.config.KeycloakAuthentication;
 
-@Component
 public class AuthenticationFilter implements Filter{
 	private static final Logger logger = LogManager.getLogger(AuthenticationFilter.class);
 

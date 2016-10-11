@@ -22,7 +22,11 @@
     		<AppenderRef ref="AsyncConsola" />
         </Logger>
         
-        <Logger level="INFO" name="org.springframework.security">
+        <Logger level="WARN" name="org.springframework.security">
+    		<AppenderRef ref="AsyncConsola" />
+        </Logger>
+        
+        <Logger level="DEBUG" name="org.springframework.security.access">
     		<AppenderRef ref="AsyncConsola" />
         </Logger>
         

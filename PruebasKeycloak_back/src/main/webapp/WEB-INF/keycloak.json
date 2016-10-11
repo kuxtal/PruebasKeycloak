@@ -5,5 +5,8 @@
   "auth-server-url": "http://japerezlocal:8080/auth",
   "ssl-required": "external",
   "resource": "PruebasKeycloak_back",
-  "enable-cors" : true
+  "enable-cors" : true,
+  "use-resource-role-mappings": true
 }
+
+## SPRING-SECURITY

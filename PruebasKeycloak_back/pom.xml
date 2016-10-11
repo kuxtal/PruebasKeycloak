@@ -51,7 +51,7 @@
 
 		<dependency>
 			<groupId>org.keycloak</groupId>
-			<artifactId>keycloak-tomcat8-adapter</artifactId>
+			<artifactId>keycloak-spring-security-adapter</artifactId>
 			<version>${keycloak.version}</version>
 		</dependency>
 		<dependency>
